@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Avenir, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    /* background-color: #4761ff;*/
+    background-color: rgba(71,97,255,0.95);
+    padding: 20px;
+    text-align: center;
+    font-size: 100%;
+    color: white;
+}
+
+table, td, th{
+    border: solid #4761ff 1px;
+    text-align: left;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 15px;
+}
+
+
+
+#welcome{
+    font-size: 180%;
+    padding: auto;
+}
+
+.button {
+    background-color: #4761ff;
+    color: white;
+    font-family: Avenir, Helvetica, sans-serif;
+    padding: 10px 20px;
+    font-size: 100%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover, .button:active {
+    background-color: #FFA69E;
+    color: black;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    height: 100%; /* only for demonstration, should be removed */
+    background: #ABD2FA;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 100%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color: rgba(85,155,255,0.95);
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(71,97,255,0.6);
+    opacity: 1;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* Clear floats after the columns */
+section:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#fields{
+    padding: 10px;
+}
+
+#delete{
+    background-color: red;
+}
+
+
+/* Style the footer */
+footer {
+//background-color: #4761ff;
+    background-color: rgba(71,97,255,0.8);
+    padding: 8px;
+    position: fixed;
+    opacity: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+        width: 100%;
+        height: auto;
+    }
+}
